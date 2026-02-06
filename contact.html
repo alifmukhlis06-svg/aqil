@@ -26,9 +26,7 @@
 
     <!-- Sticky Navigation -->
     <nav class="main-nav">
-        <button class="menu-toggle" aria-label="Toggle navigation menu">
-            <i class="fas fa-bars"></i>
-        </button>
+
         <div class="nav-container">
             <a href="index.html" class="nav-item"><i class="fas fa-home"></i> Home</a>
             <a href="about.html" class="nav-item"><i class="fas fa-info-circle"></i> About the Issue</a>
@@ -43,229 +41,99 @@
             <!-- Page Header -->
             <div class="content-header">
                 <h1>Contact & Support</h1>
-                <p>You are not alone. Help is available 24/7. Reach out to us or any of these trusted organizations for immediate assistance.</p>
+                <p>Help is available 24/7. Reach out to us or any of these trusted helplines for immediate assistance.</p>
             </div>
 
             <!-- Emergency Contacts Section -->
             <section class="content-section">
-                <h2><i class="fas fa-phone-alt"></i> Emergency Contacts</h2>
+                <h2><i class="fas fa-phone-alt"></i> Helpline Information (Malaysia)</h2>
                 
-                <div class="emergency-banner" id="emergencyBanner">
-                    <h3><i class="fas fa-exclamation-triangle"></i> In Immediate Danger?</h3>
-                    <span class="emergency-number">999</span>
-                    <p>Police Emergency | Available 24/7</p>
-                </div>
+                <div class="features" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin: 2rem 0;">
+                    <div class="feature-card" style="background: linear-gradient(135deg, #FF5252, #FF4081); color: white;">
+                        <div class="feature-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h3>Police Emergency</h3>
+                        <div style="font-size: 2.5rem; font-weight: 900; margin: 1rem 0;">999</div>
+                        <p>Available 24 hours, 7 days a week</p>
+                        <p>Use for immediate danger or threats</p>
+                    </div>
 
-                <div class="features" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); margin-top: 2rem;">
-                    <!-- Helpline Card -->
-                    <div class="feature-card" onclick="showContactInfo('WAO')">
+                    <div class="feature-card" style="background: linear-gradient(135deg, var(--primary-purple), var(--dark-purple)); color: white;">
                         <div class="feature-icon">
                             <i class="fas fa-phone-volume"></i>
                         </div>
-                        <h3>Women's Aid Organisation (WAO)</h3>
-                        <p><strong>Hotline:</strong> +603 7956 3488</p>
-                        <p><strong>SMS/WhatsApp:</strong> +6018 988 8058</p>
-                        <p><strong>Hours:</strong> 24/7</p>
-                        <small>Click for more information</small>
+                        <h3>Women & Girls Hotline</h3>
+                        <div style="font-size: 2.5rem; font-weight: 900; margin: 1rem 0;">15999</div>
+                        <p>Talian Kasih Hotline</p>
+                        <p>Counseling and support services</p>
                     </div>
 
-                    <!-- Talian Kasih Card -->
-                    <div class="feature-card" onclick="showContactInfo('TK')">
+                    <div class="feature-card" style="background: linear-gradient(135deg, #26C6DA, #00ACC1); color: white;">
                         <div class="feature-icon">
-                            <i class="fas fa-hands-helping"></i>
+                            <i class="fas fa-envelope"></i>
                         </div>
-                        <h3>Talian Kasih</h3>
-                        <p><strong>Hotline:</strong> 15999</p>
-                        <p><strong>WhatsApp:</strong> +6019 261 5999</p>
-                        <p><strong>Hours:</strong> 24/7</p>
-                        <small>Click for more information</small>
-                    </div>
-
-                    <!-- SafeHome Support Card -->
-                    <div class="feature-card" onclick="showContactInfo('SH')">
-                        <div class="feature-icon">
-                            <i class="fas fa-home"></i>
+                        <h3>Email Support</h3>
+                        <div style="font-size: 1.5rem; font-weight: 600; margin: 1rem 0; word-break: break-all;">
+                            support@safehome.my
                         </div>
-                        <h3>SafeHome Support Line</h3>
-                        <p><strong>Hotline:</strong> 1 800 88 0880</p>
-                        <p><strong>Email:</strong> support@safehome.my</p>
-                        <p><strong>Hours:</strong> 24/7</p>
-                        <small>Click for more information</small>
+                        <p>For non-urgent inquiries</p>
+                        <p>Response within 24 hours</p>
                     </div>
                 </div>
             </section>
 
-            <!-- Support Services Section -->
+
+
+            <!-- Useful Links Section -->
             <section class="content-section">
-                <h2><i class="fas fa-hands-helping"></i> Support Services</h2>
-                
-                <div class="fact-box">
-                    <h3><i class="fas fa-shield-alt"></i> Immediate Safety Planning</h3>
-                    <p>If you're in danger, we can help you create a personalized safety plan. This includes:</p>
-                    <ul>
-                        <li>Identifying safe places in your home</li>
-                        <li>Creating a code word with trusted friends/family</li>
-                        <li>Preparing an emergency bag with essentials</li>
-                        <li>Documenting incidents safely</li>
-                    </ul>
-                </div>
-
-                <div class="tip-box">
-                    <h3><i class="fas fa-balance-scale"></i> Legal Assistance</h3>
-                    <p>Free legal advice and support available:</p>
-                    <ul>
-                        <li>Protection Orders (IPO/EPO)</li>
-                        <li>Divorce proceedings</li>
-                        <li>Child custody matters</li>
-                        <li>Police report assistance</li>
-                    </ul>
-                    <p><strong>Contact our legal team:</strong> legal@safehome.my</p>
-                </div>
-
-                <div class="fact-box">
-                    <h3><i class="fas fa-heart"></i> Counseling Services</h3>
-                    <p>Professional counseling available:</p>
-                    <ul>
-                        <li>Trauma-informed therapy</li>
-                        <li>Support groups (virtual & in-person)</li>
-                        <li>Children's counseling</li>
-                        <li>Crisis intervention</li>
-                    </ul>
-                    <p><strong>Book a session:</strong> counseling@safehome.my</p>
-                </div>
-            </section>
-
-            <!-- Contact Form Section -->
-            <section class="content-section">
-                <h2><i class="fas fa-envelope"></i> Contact Us</h2>
-                <p>Fill out the form below for non-urgent inquiries. For immediate help, please call our hotlines.</p>
-                
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name"><i class="fas fa-user"></i> Full Name *</label>
-                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email"><i class="fas fa-envelope"></i> Email Address *</label>
-                            <input type="email" id="email" name="email" required placeholder="Enter your email">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="phone"><i class="fas fa-phone"></i> Phone Number</label>
-                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="subject"><i class="fas fa-tag"></i> Subject *</label>
-                            <select id="subject" name="subject" required>
-                                <option value="">Select a subject</option>
-                                <option value="support">I need support</option>
-                                <option value="info">Request for information</option>
-                                <option value="volunteer">Volunteer inquiry</option>
-                                <option value="donation">Donation inquiry</option>
-                                <option value="partnership">Partnership opportunity</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message"><i class="fas fa-comment"></i> Message *</label>
-                            <textarea id="message" name="message" required placeholder="Tell us how we can help you..." rows="5"></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label>
-                                <input type="checkbox" required>
-                                I agree to the <a href="#" style="color: var(--primary-purple);">privacy policy</a> and understand this is not an emergency service.
-                            </label>
-                        </div>
-
-                        <button type="submit" class="cta-button cta-primary" style="width: 100%;">
-                            <i class="fas fa-paper-plane"></i> Send Message
-                        </button>
-                    </form>
-                </div>
-            </section>
-
-            <!-- Physical Locations -->
-            <section class="content-section">
-                <h2><i class="fas fa-map-marker-alt"></i> Our Locations</h2>
+                <h2><i class="fas fa-link"></i> Useful Links</h2>
                 
                 <div class="features" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <i class="fas fa-city"></i>
+                            <i class="fas fa-landmark"></i>
                         </div>
-                        <h3>Kuala Lumpur HQ</h3>
-                        <p><strong>Address:</strong><br>
-                        Level 3, Wisma SAFE<br>
-                        Jalan Tun Razak<br>
-                        50400 Kuala Lumpur</p>
-                        <p><strong>Operating Hours:</strong><br>
-                        Mon-Fri: 9AM-6PM<br>
-                        Sat: 9AM-1PM<br>
-                        Sun: Closed</p>
+                        <h3>Ministry of Women Malaysia</h3>
+                        <p>Government resources and support for women and families in Malaysia.</p>
+                        <a href="#" class="cta-button cta-secondary" style="margin-top: 1rem; padding: 0.5rem 1.5rem;">
+                            <i class="fas fa-external-link-alt"></i> Visit Website
+                        </a>
                     </div>
 
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <i class="fas fa-building"></i>
+                            <i class="fas fa-hands-helping"></i>
                         </div>
-                        <h3>Penang Branch</h3>
-                        <p><strong>Address:</strong><br>
-                        No. 15, Jalan Gottlieb<br>
-                        10350 George Town<br>
-                        Penang</p>
-                        <p><strong>Operating Hours:</strong><br>
-                        Mon-Fri: 9AM-5PM<br>
-                        Sat: 9AM-12PM<br>
-                        Sun: Closed</p>
+                        <h3>WAO Malaysia</h3>
+                        <p>Women's Aid Organisation provides shelter, counseling, and support services.</p>
+                        <a href="#" class="cta-button cta-secondary" style="margin-top: 1rem; padding: 0.5rem 1.5rem;">
+                            <i class="fas fa-external-link-alt"></i> Visit Website
+                        </a>
                     </div>
 
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <i class="fas fa-home"></i>
+                            <i class="fas fa-comments"></i>
                         </div>
-                        <h3>Johor Bahru Center</h3>
-                        <p><strong>Address:</strong><br>
-                        Suite 8-2, Wisma JOTIC<br>
-                        Jalan Ayer Molek<br>
-                        80000 Johor Bahru</p>
-                        <p><strong>Operating Hours:</strong><br>
-                        Mon-Fri: 8:30AM-5:30PM<br>
-                        Sat: Appointment only<br>
-                        Sun: Closed</p>
+                        <h3>Befrienders</h3>
+                        <p>Emotional support and suicide prevention helpline in Malaysia.</p>
+                        <a href="#" class="cta-button cta-secondary" style="margin-top: 1rem; padding: 0.5rem 1.5rem;">
+                            <i class="fas fa-external-link-alt"></i> Visit Website
+                        </a>
                     </div>
                 </div>
             </section>
 
-            <!-- Safety Tips -->
-            <section class="content-section">
-                <div class="hotline-box">
-                    <h3><i class="fas fa-lightbulb"></i> Safety First - Important Tips</h3>
-                    <div style="text-align: left; padding: 1rem;">
-                        <p><strong>If you're in immediate danger:</strong></p>
-                        <ol>
-                            <li>Call 999 immediately</li>
-                            <li>Try to get to a room with a lock and a phone</li>
-                            <li>If you can leave safely, go to a trusted neighbor's house or public place</li>
-                            <li>Don't worry about belongings - your safety comes first</li>
-                        </ol>
-                        
-                        <p><strong>If using a shared computer/phone:</strong></p>
-                        <ul>
-                            <li>Clear your browser history after visiting support sites</li>
-                            <li>Use private/incognito browsing mode</li>
-                            <li>Create a new email account for support communications</li>
-                            <li>Save important numbers under different names</li>
-                        </ul>
-                        
-                        <p style="margin-top: 1rem; font-style: italic; color: #d32f2f;">
-                            <i class="fas fa-exclamation-circle"></i> Remember: You have the right to live free from violence and fear.
-                        </p>
-                    </div>
+            <!-- Emergency Banner -->
+            <section class="content-section" style="text-align: center;">
+                <div class="emergency-banner" id="emergencyBanner">
+                    <h3><i class="fas fa-exclamation-triangle"></i> In Immediate Danger?</h3>
+                    <span class="emergency-number">999</span>
+                    <p>Police Emergency | Available 24/7</p>
+                    <p style="margin-top: 1rem; font-size: 1.2rem;">
+                        Also call: <strong>15999</strong> (Women & Girls Hotline)
+                    </p>
                 </div>
             </section>
         </div>
@@ -293,25 +161,24 @@
                     <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Domestic Violence</a></li>
                     <li><a href="awareness.html"><i class="fas fa-chevron-right"></i> Educational Resources</a></li>
                     <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Emergency Contacts</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Support Groups</a></li>
                 </ul>
             </div>
             
             <div class="footer-section">
                 <h4>Contact Info</h4>
                 <ul class="footer-links">
-                    <li><a href="tel:15999"><i class="fas fa-phone"></i> Helpline: 15999</a></li>
+                    <li><a href="tel:15999"><i class="fas fa-phone"></i> Women & Girls Hotline: 15999</a></li>
+                    <li><a href="tel:999"><i class="fas fa-phone"></i> Police Emergency: 999</a></li>
                     <li><a href="mailto:support@safehome.my"><i class="fas fa-envelope"></i> support@safehome.my</a></li>
-                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> Kuala Lumpur, Malaysia</a></li>
                 </ul>
             </div>
             
             <div class="footer-section">
-                <h4>Legal</h4>
+                <h4>Useful Links</h4>
                 <ul class="footer-links">
-                    <li><a href="#"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
-                    <li><a href="#"><i class="fas fa-file-contract"></i> Terms of Service</a></li>
-                    <li><a href="#"><i class="fas fa-balance-scale"></i> Disclaimer</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Ministry of Women Malaysia</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> WAO Malaysia</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Befrienders</a></li>
                 </ul>
             </div>
         </div>
@@ -323,55 +190,11 @@
 
     <!-- JavaScript -->
     <script>
-        // Contact Page Specific JavaScript
+        // Contact Page JavaScript
         document.addEventListener('DOMContentLoaded', function() {
             // Initialize particles
-            const particlesContainer = document.getElementById('particles');
-            if (particlesContainer) {
-                createParticles();
-            }
-
-            // Form validation
-            const contactForm = document.getElementById('contactForm');
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    
-                    // Get form values
-                    const name = document.getElementById('name').value.trim();
-                    const email = document.getElementById('email').value.trim();
-                    const subject = document.getElementById('subject').value;
-                    const message = document.getElementById('message').value.trim();
-                    
-                    // Validation
-                    if (!name || !email || !subject || !message) {
-                        showNotification('Please fill in all required fields.', 'error');
-                        return;
-                    }
-                    
-                    // Email validation
-                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    if (!emailRegex.test(email)) {
-                        showNotification('Please enter a valid email address.', 'error');
-                        return;
-                    }
-                    
-                    // Show loading state
-                    const submitBtn = this.querySelector('button[type="submit"]');
-                    const originalText = submitBtn.innerHTML;
-                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-                    submitBtn.disabled = true;
-                    
-                    // Simulate form submission
-                    setTimeout(() => {
-                        showNotification('Thank you for your message. Our support team will contact you within 24 hours.', 'success');
-                        contactForm.reset();
-                        submitBtn.innerHTML = originalText;
-                        submitBtn.disabled = false;
-                    }, 1500);
-                });
-            }
-
+            createParticles();
+            
             // Mobile menu setup
             const menuToggle = document.querySelector('.menu-toggle');
             const navContainer = document.querySelector('.nav-container');
@@ -384,8 +207,48 @@
                         : '<i class="fas fa-bars"></i>';
                 });
             }
-
-            // Emergency banner
+            
+            // Contact form submission
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form values
+                    const name = document.getElementById('name').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const message = document.getElementById('message').value.trim();
+                    
+                    // Validation
+                    if (!name || !email || !message) {
+                        alert('Please fill in all fields.');
+                        return;
+                    }
+                    
+                    // Email validation
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(email)) {
+                        alert('Please enter a valid email address.');
+                        return;
+                    }
+                    
+                    // Show loading state
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerHTML;
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                    submitBtn.disabled = true;
+                    
+                    // Simulate form submission
+                    setTimeout(() => {
+                        alert('Thank you for your message. We will respond to your email within 24 hours.');
+                        contactForm.reset();
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                    }, 1500);
+                });
+            }
+            
+            // Emergency banner interaction
             const emergencyBanner = document.getElementById('emergencyBanner');
             if (emergencyBanner) {
                 emergencyBanner.addEventListener('click', function() {
@@ -394,12 +257,26 @@
                         this.style.transform = 'scale(1)';
                     }, 200);
                     
-                    const emergencyMessage = `🚨 EMERGENCY CONTACTS 🚨\n\n📞 Police: 999\n📞 Women's Aid Organisation: +603 7956 3488\n📞 Talian Kasih: 15999\n📞 SafeHome: 1 800 88 0880\n\nIf in immediate danger:\n1. Call 999\n2. Go to a safe place\n3. Contact support`;
+                    const emergencyMessage = `🚨 EMERGENCY CONTACTS 🚨\n\n📞 Police: 999\n📞 Women & Girls Hotline: 15999\n📧 Email: support@safehome.my\n\nIf in immediate danger:\n1. Call 999 immediately\n2. Find a safe place\n3. Contact the hotline: 15999`;
                     alert(emergencyMessage);
                 });
             }
+            
+            // Feature card interactions
+            const featureCards = document.querySelectorAll('.feature-card');
+            featureCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    const icon = this.querySelector('.feature-icon');
+                    if (icon) {
+                        icon.style.animation = 'none';
+                        setTimeout(() => {
+                            icon.style.animation = 'icon-float 1s ease-in-out';
+                        }, 10);
+                    }
+                });
+            });
         });
-
+        
         // Create floating particles
         function createParticles() {
             const particlesContainer = document.getElementById('particles');
@@ -425,81 +302,15 @@
                 
                 const colors = [
                     'rgba(255, 255, 255, 0.2)',
-                    'rgba(255, 64, 129, 0.2)',
-                    'rgba(38, 198, 218, 0.2)'
+                    'rgba(123, 75, 181, 0.2)',
+                    'rgba(255, 64, 129, 0.2)'
                 ];
                 particle.style.background = colors[Math.floor(Math.random() * colors.length)];
                 
                 particlesContainer.appendChild(particle);
             }
         }
-
-        // Show contact information
-        function showContactInfo(type) {
-            let info = '';
-            switch(type) {
-                case 'WAO':
-                    info = `Women's Aid Organisation (WAO)\n\n📞 Hotline: +603 7956 3488\n📱 SMS/WhatsApp: +6018 988 8058\n📧 Email: wao@wao.org.my\n🌐 Website: www.wao.org.my\n\nServices:\n• 24/7 Crisis Support\n• Shelter Services\n• Counseling\n• Legal Aid\n• Child Support`;
-                    break;
-                case 'TK':
-                    info = `Talian Kasih\n\n📞 Hotline: 15999\n📱 WhatsApp: +6019 261 5999\n🌐 Website: www.jkm.gov.my\n\nServices:\n• 24/7 National Hotline\n• Emergency Assistance\n• Counseling Services\n• Welfare Support\n• Shelter Referrals`;
-                    break;
-                case 'SH':
-                    info = `SafeHome Malaysia Support\n\n📞 Hotline: 1 800 88 0880\n📧 Email: support@safehome.my\n🌐 Website: www.safehome.my\n\nServices:\n• 24/7 Support Line\n• Safety Planning\n• Legal Assistance\n• Support Groups\n• Resource Referrals`;
-                    break;
-            }
-            
-            if (info) {
-                alert(info);
-            }
-        }
-
-        // Notification system
-        function showNotification(message, type = 'info') {
-            const existingNotification = document.querySelector('.notification');
-            if (existingNotification) {
-                existingNotification.remove();
-            }
-            
-            const notification = document.createElement('div');
-            notification.className = `notification notification-${type}`;
-            notification.innerHTML = `
-                <i class="fas fa-${getNotificationIcon(type)}"></i>
-                <span>${message}</span>
-                <button class="notification-close"><i class="fas fa-times"></i></button>
-            `;
-            
-            document.body.appendChild(notification);
-            
-            setTimeout(() => {
-                notification.classList.add('show');
-            }, 10);
-            
-            setTimeout(() => {
-                notification.classList.remove('show');
-                setTimeout(() => {
-                    notification.remove();
-                }, 300);
-            }, 5000);
-            
-            const closeBtn = notification.querySelector('.notification-close');
-            closeBtn.addEventListener('click', () => {
-                notification.classList.remove('show');
-                setTimeout(() => {
-                    notification.remove();
-                }, 300);
-            });
-        }
-
-        function getNotificationIcon(type) {
-            switch(type) {
-                case 'success': return 'check-circle';
-                case 'error': return 'exclamation-circle';
-                case 'warning': return 'exclamation-triangle';
-                default: return 'info-circle';
-            }
-        }
-
+        
         // Navigation scroll effect
         window.addEventListener('scroll', function() {
             const mainNav = document.querySelector('.main-nav');
@@ -516,5 +327,3 @@
     </script>
 </body>
 </html>
-
-
