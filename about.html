@@ -78,19 +78,437 @@
     </main>
 
     <!-- Same footer as index.html -->
+    <!-- Footer -->
     <footer class="footer">
-        <!-- Same footer content as index.html -->
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>SafeHome Malaysia</h4>
+                <p>Working towards violence-free homes since 2020. 
+                We believe every individual deserves safety, respect, and dignity.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Domestic Violence</a></li>
+                    <li><a href="awareness.html"><i class="fas fa-chevron-right"></i> Educational Resources</a></li>
+                    <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Emergency Contacts</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Support Groups</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <ul class="footer-links">
+                    <li><a href="tel:15999"><i class="fas fa-phone"></i> Helpline: 15999</a></li>
+                    <li><a href="mailto:support@safehome.my"><i class="fas fa-envelope"></i> support@safehome.my</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> Kuala Lumpur, Malaysia</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+                    <li><a href="#"><i class="fas fa-file-contract"></i> Terms of Service</a></li>
+                    <li><a href="#"><i class="fas fa-balance-scale"></i> Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 SafeHome Malaysia. All rights reserved. | Standing together against violence</p>
+        </div>
     </footer>
 
     <!-- Same JavaScript as index.html (embedded) -->
-    <script>
-        // Copy JavaScript from index.html here
-        // (Same initialization code)
+ <script>
+        // SafeHome Malaysia - JavaScript for Interactive Features
+        // Embedded in HTML as per requirements
+
+        // ===== DOM Elements =====
+        const particlesContainer = document.getElementById('particles');
+        const mainNav = document.querySelector('.main-nav');
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navContainer = document.querySelector('.nav-container');
+        const emergencyBanner = document.getElementById('emergencyBanner');
+        const featureCards = document.querySelectorAll('.feature-card');
+        const statNumbers = document.querySelectorAll('.stat-number[data-count]');
+
+        // ===== Create Floating Particles =====
+        function createParticles() {
+            if (!particlesContainer) return;
+            
+            const particleCount = 50;
+            particlesContainer.innerHTML = '';
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Random properties
+                const size = Math.random() * 10 + 5;
+                const left = Math.random() * 100;
+                const duration = Math.random() * 20 + 20;
+                const delay = Math.random() * 5;
+                
+                // Apply styles
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${left}%`;
+                particle.style.animationDelay = `${delay}s`;
+                particle.style.animationDuration = `${duration}s`;
+                
+                // Random color
+                const colors = [
+                    'rgba(255, 255, 255, 0.2)',
+                    'rgba(255, 64, 129, 0.2)',
+                    'rgba(38, 198, 218, 0.2)'
+                ];
+                particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // ===== Navigation Scroll Effect =====
+        function handleScroll() {
+            if (!mainNav) return;
+            
+            if (window.scrollY > 100) {
+                mainNav.style.background = 'rgba(45, 55, 72, 0.95)';
+                mainNav.style.backdropFilter = 'blur(20px)';
+            } else {
+                mainNav.style.background = 'rgba(255, 255, 255, 0.15)';
+                mainNav.style.backdropFilter = 'blur(10px)';
+            }
+        }
+
+        // ===== Mobile Menu Toggle =====
+        function setupMobileMenu() {
+            if (!menuToggle || !navContainer) return;
+            
+            menuToggle.addEventListener('click', () => {
+                navContainer.classList.toggle('show');
+                menuToggle.innerHTML = navContainer.classList.contains('show') 
+                    ? '<i class="fas fa-times"></i>' 
+                    : '<i class="fas fa-bars"></i>';
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!navContainer.contains(e.target) && !menuToggle.contains(e.target)) {
+                    navContainer.classList.remove('show');
+                    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            });
+        }
+
+        // ===== Interactive Card Hover Effects =====
+        function enhanceFeatureCards() {
+            featureCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    const icon = this.querySelector('.feature-icon');
+                    if (icon) {
+                        icon.style.animation = 'none';
+                        setTimeout(() => {
+                            icon.style.animation = 'icon-float 1s ease-in-out';
+                        }, 10);
+                    }
+                });
+            });
+        }
+
+        // ===== Emergency Banner Interaction =====
+        function setupEmergencyBanner() {
+            if (!emergencyBanner) return;
+            
+            emergencyBanner.addEventListener('click', function() {
+                // Add click effect
+                this.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 200);
+                
+                // Show confirmation
+                alert('📞 Emergency Services: 999\n\nIf you are in immediate danger:\n1. Call 999 immediately\n2. Find a safe place\n3. Contact our helpline: 15999');
+            });
+        }
+
+        // ===== Statistics Counter Animation =====
+        function animateStatistics() {
+            statNumbers.forEach(stat => {
+                const finalValue = parseInt(stat.getAttribute('data-count'));
+                if (!finalValue) return;
+                
+                const duration = 2000;
+                const increment = finalValue / (duration / 16);
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= finalValue) {
+                        stat.textContent = formatNumber(finalValue);
+                        clearInterval(timer);
+                    } else {
+                        stat.textContent = formatNumber(Math.floor(current));
+                    }
+                }, 16);
+            });
+        }
+
+        function formatNumber(num) {
+            if (num >= 1000) {
+                return (num / 1000).toFixed(0) + 'K+';
+            }
+            return num.toString();
+        }
+
+        // ===== Form Validation (for contact page) =====
+        function setupFormValidation() {
+            const contactForm = document.getElementById('contactForm');
+            if (!contactForm) return;
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById('name')?.value.trim();
+                const email = document.getElementById('email')?.value.trim();
+                const message = document.getElementById('message')?.value.trim();
+                
+                // Basic validation
+                if (!name || !email || !message) {
+                    showNotification('Please fill in all required fields.', 'error');
+                    return;
+                }
+                
+                // Email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    showNotification('Please enter a valid email address.', 'error');
+                    return;
+                }
+                
+                // Show loading state
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                submitBtn.disabled = true;
+                
+                // Simulate form submission
+                setTimeout(() => {
+                    showNotification('Thank you for your message. We will respond within 24 hours.', 'success');
+                    contactForm.reset();
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                }, 1500);
+            });
+        }
+
+        // ===== Notification System =====
+        function showNotification(message, type = 'info') {
+            // Remove existing notifications
+            const existingNotification = document.querySelector('.notification');
+            if (existingNotification) {
+                existingNotification.remove();
+            }
+            
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            notification.innerHTML = `
+                <i class="fas fa-${getNotificationIcon(type)}"></i>
+                <span>${message}</span>
+                <button class="notification-close"><i class="fas fa-times"></i></button>
+            `;
+            
+            // Add to page
+            document.body.appendChild(notification);
+            
+            // Show notification
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 10);
+            
+            // Auto remove after 5 seconds
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    notification.remove();
+                }, 300);
+            }, 5000);
+            
+            // Close button functionality
+            const closeBtn = notification.querySelector('.notification-close');
+            closeBtn.addEventListener('click', () => {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    notification.remove();
+                }, 300);
+            });
+        }
+
+        function getNotificationIcon(type) {
+            switch(type) {
+                case 'success': return 'check-circle';
+                case 'error': return 'exclamation-circle';
+                case 'warning': return 'exclamation-triangle';
+                default: return 'info-circle';
+            }
+        }
+
+        // ===== Smooth Scrolling =====
+        function setupSmoothScrolling() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        }
+
+        // ===== Initialize Everything =====
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('SafeHome Malaysia Website Initialized');
+            
+            // Initialize features
+            createParticles();
+            enhanceFeatureCards();
+            setupEmergencyBanner();
+            setupMobileMenu();
+            setupSmoothScrolling();
+            setupFormValidation();
+            
+            // Add scroll listener
+            window.addEventListener('scroll', handleScroll);
+            
+            // Initialize statistics animation when in viewport
+            const statsSection = document.querySelector('.stats');
+            if (statsSection) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            animateStatistics();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+                
+                observer.observe(statsSection);
+            }
+            
+            // Window resize handler
+            let resizeTimer;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(() => {
+                    createParticles();
+                    // Update menu on resize
+                    if (window.innerWidth > 768) {
+                        navContainer.classList.remove('show');
+                        if (menuToggle) {
+                            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                        }
+                    }
+                }, 250);
+            });
+            
+            // Set active navigation item based on current page
+            const currentPage = window.location.pathname.split('/').pop();
+            const navItems = document.querySelectorAll('.nav-item');
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === currentPage) {
+                    item.classList.add('active');
+                } else if (currentPage === '' && item.getAttribute('href') === 'index.html') {
+                    item.classList.add('active');
+                }
+            });
+        });
     </script>
 
     <!-- Same notification styles as index.html -->
     <style>
         /* Copy notification styles from index.html here */
+                .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 20px;
+            border-radius: var(--radius-md);
+            background: var(--white);
+            box-shadow: var(--shadow-hover);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            z-index: 9999;
+            transform: translateX(120%);
+            transition: transform 0.3s ease;
+            max-width: 400px;
+        }
+        
+        .notification.show {
+            transform: translateX(0);
+        }
+        
+        .notification-success {
+            border-left: 4px solid #4CAF50;
+            color: #2E7D32;
+        }
+        
+        .notification-error {
+            border-left: 4px solid #F44336;
+            color: #C62828;
+        }
+        
+        .notification-warning {
+            border-left: 4px solid #FF9800;
+            color: #EF6C00;
+        }
+        
+        .notification-info {
+            border-left: 4px solid var(--primary-purple);
+            color: var(--dark-purple);
+        }
+        
+        .notification i {
+            font-size: 1.2rem;
+        }
+        
+        .notification-close {
+            background: none;
+            border: none;
+            color: inherit;
+            cursor: pointer;
+            margin-left: auto;
+            padding: 0;
+            font-size: 1rem;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+        
+        .notification-close:hover {
+            opacity: 1;
+        }
+        
     </style>
 </body>
+
 </html>
